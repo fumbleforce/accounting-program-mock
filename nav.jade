@@ -1,0 +1,18 @@
+.ui.menu
+  a.item.link(href="/" class="#{ current.path[0] == 'index' ? 'active' : '' }")
+    i.play.icon
+    | Play
+  a.item.link(href="/home" class="#{ current.path[0] == 'home' ? 'active' : '' }")
+    i.home.icon
+    | Home
+  a.item.link(href="/money" class="#{ current.path[0] == 'money' ? 'active' : '' }")
+    i.money.icon
+    | Money
+  a.item.link(href="/job" class="#{ current.path[0] == 'job' ? 'active' : '' }")
+    i.suitcase.icon
+    | Job
+
+  .menu.right.floated
+    a.item.link
+      i.sign.out.icon
+      | Sign out

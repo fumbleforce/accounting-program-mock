@@ -1,0 +1,11 @@
+doctype
+html
+  head
+    script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
+    link(rel="stylesheet" href="/styles/semantic/semantic.min.css")
+    link(rel="stylesheet" href="/styles/main.css")
+  body
+    .ui.container
+      .ui.basic.segment
+        include nav.jade
+        != yield

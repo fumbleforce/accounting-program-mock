@@ -1,0 +1,38 @@
+
+
+#sankey_basic(style="width: 900px; height: 300px; margin: 0 auto")
+
+
+
+
+
+
+script.
+  google.charts.load('current', {'packages':['sankey']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = new google.visualization.DataTable();
+    data.addColumn('string', 'From');
+    data.addColumn('string', 'To');
+    data.addColumn('number', 'Money');
+    data.addRows([
+      [ 'Income', 'Savings', 2 ],
+        [ 'Savings', 'Mutual funds', 1 ],
+        [ 'Savings', 'Savings account', 1 ],
+      [ 'Income', 'Fixed expenses', 7 ],
+        [ 'Fixed expenses', 'Rent', 5 ],
+        [ 'Fixed expenses', 'Electricity', 2 ],
+      [ 'Income', 'Spending', 12 ],
+        [ 'Spending', 'Food', 4],
+        [ 'Spending', 'Entertainment', 4],
+        [ 'Spending', 'Transportation', 4],
+    ]);
+
+    // Sets chart options.
+    var options = {};
+
+    // Instantiates and draws our chart, passing in some options.
+    var chart = new google.visualization.Sankey(document.getElementById('sankey_basic'));
+    chart.draw(data, options);
+  }
