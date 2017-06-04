@@ -1,0 +1,72 @@
+
+.ui.huge.header Brukskonto
+
+#chart_div(style="width: 100%; height: 300px;")
+
+.ui.hidden.divider
+
+.ui.two.column.grid
+  .column
+
+  .column
+    .ui.header Transaksjoner
+
+    .ui.large.divided.padded.list
+      .item
+        .content.right.floated
+          .header kr 5 000
+          a Se detaljer
+        .content.inline-block
+          .header 24. Mai
+        .content.inline-block.pl2
+          .header Strømregning
+          | Trønderenergi AS
+      .item
+        .content.right.floated
+          .header kr 5 000
+          a Se detaljer
+        .content.inline-block
+          .header 24. Mai
+        .content.inline-block.pl2
+          .header Strømregning
+          | Trønderenergi AS
+      .item
+        .content.right.floated
+          .header kr 5 000
+          a Se detaljer
+        .content.inline-block
+          .header 24. Mai
+        .content.inline-block.pl2
+          .header Strømregning
+          | Trønderenergi AS
+
+
+
+
+
+
+
+
+
+
+script.
+  google.charts.load('current', {'packages':['corechart']});
+  google.charts.setOnLoadCallback(drawChart);
+
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Year', 'Balance'],
+      ['2013',  1000],
+      ['2014',  1170],
+      ['2015',  660],
+      ['2016',  1030]
+    ]);
+
+    var options = {
+      hAxis: {titleTextStyle: {color: '#333'}},
+      vAxis: {minValue: 0}
+    };
+
+    var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+    chart.draw(data, options);
+  }

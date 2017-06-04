@@ -1,11 +1,23 @@
 doctype
 html
   head
+    title MittRegnskap
+    meta(name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1")
     script(type="text/javascript" src="https://www.gstatic.com/charts/loader.js")
-    link(rel="stylesheet" href="/styles/semantic/semantic.min.css")
+    link(rel="stylesheet" href="/styles/semantic/dist/semantic.min.css")
+    link(rel="stylesheet" href="/styles/extensions.css")
     link(rel="stylesheet" href="/styles/main.css")
+
+    link(href="https://fonts.googleapis.com/css?family=Open Sans" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet")
+
+    script(src="/scripts/jquery.js")
+    script(src="/styles/semantic/dist/semantic.min.js")
   body
-    .ui.container
-      .ui.basic.segment
+    .layout
+      .sidebar
         include nav.jade
-        != yield
+      .main
+        include status.jade
+        .ui.container
+            != yield

@@ -1,0 +1,67 @@
+.ui.huge.header Juni 2017
+
+div
+  button.ui.green.large.button
+    i.edit.icon
+    | Change budget
+
+.ui.small.dividing.header Inntekt
+
+.ui.progress(data-percent="100")
+  .left.label Lønn
+  .right.label kr 23 000 / 23 000
+  .bar
+    .progress
+
+.ui.progress(data-percent="100")
+  .left.label Renter
+  .right.label kr 100 / 100
+  .bar
+    .progress
+
+
+.ui.divider
+
+.ui.small.dividing.header Utgifter
+
+
+.ui.orange.progress(data-percent="72")
+  .left.label Dagligvarer
+  .right.label kr 2700 / 3100
+  .bar
+    .progress
+
+
+.ui.green.progress(data-percent="10")
+  .left.label Klær
+  .right.label kr 100 / 1000
+  .bar
+    .progress
+
+
+.ui.green.progress(data-percent="30")
+  .left.label Spill
+  .right.label kr 300 / 700
+  .bar
+    .progress
+
+
+.ui.orange.progress(data-percent="60")
+  .left.label Strøm
+  .right.label kr 300 / 500
+  .bar
+    .progress
+
+
+.ui.error.progress(data-percent="100")
+  .left.label Hundeleker
+  .right.label kr 2000 / 500
+  .bar
+    .progress
+
+
+
+
+
+script.
+  $(".progress").progress();

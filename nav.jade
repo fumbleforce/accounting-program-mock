@@ -1,16 +1,23 @@
-.ui.menu
+.ui.header
+  i.pied.piper.hat.icon
+  | MittRegnskap
+
+.ui.vertical.fluid.menu.borderless.inverted.violet.marginless
   a.item.link(href="/" class="#{ current.path[0] == 'index' ? 'active' : '' }")
-    i.play.icon
-    | Play
-  a.item.link(href="/home" class="#{ current.path[0] == 'home' ? 'active' : '' }")
     i.home.icon
-    | Home
-  a.item.link(href="/money" class="#{ current.path[0] == 'money' ? 'active' : '' }")
-    i.money.icon
-    | Money
-  a.item.link(href="/job" class="#{ current.path[0] == 'job' ? 'active' : '' }")
-    i.suitcase.icon
-    | Job
+    | Oversikt
+  a.item.link(href="/budget" class="#{ current.path[0] == 'budget' ? 'active' : '' }")
+    i.checkmark.icon
+    | Budsjett
+  a.item.link(href="/accounts" class="#{ current.path[0] == 'accounts' ? 'active' : '' }")
+    i.block.layout.icon
+    | Kontoer
+  a.item.link(href="/transactions" class="#{ current.path[0] == 'transactions' ? 'active' : '' }")
+    i.list.layout.icon
+    | Transaksjoner
+  a.item.link(href="/balance" class="#{ current.path[0] == 'balance' ? 'active' : '' }")
+    i.law.icon
+    | Balanse
 
   .menu.right.floated
     a.item.link
